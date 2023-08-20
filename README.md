@@ -40,28 +40,28 @@ Authenticate Cmd:
 	  	|     |      3G Context (if service 27 is avialable in UST so Kc would be calculated if the command succeeded)
 	  	|		Specific reference data (e.g. DF specific/application dependant key)
 	  
-10 --> length of TEMP
-3D8FFB739DC7183D46E6EB2EA76A692F --> RAND
-10 --> length of AUTN
-B1BDF7AB32250101B4530E20C33FA984 --> AUTN
+    10 --> length of TEMP
+    3D8FFB739DC7183D46E6EB2EA76A692F --> RAND
+    10 --> length of AUTN
+    B1BDF7AB32250101B4530E20C33FA984 --> AUTN
 
 -----------------
 Get Response: (RES,CK,IK,Kc)
 -----------------
-DB --> Successful 3G Authentication Tag
-08 --> Length of RES
-45FE85E4E353CC9C --> RES
-10 --> Length of CK
-8E7568D5793C1EE1F5C32139AFCF9765 --> CK --> Cipher Key
-10 --> Length of IK
-87D83FF5AA51CACE48C21015469A6818 --> IK --> Itegrity Key
-08 --> length of Kc
-B4AC660C3A382B52 --> Kc --> GSM Response Parameter
+    DB --> Successful 3G Authentication Tag
+    08 --> Length of RES
+    45FE85E4E353CC9C --> RES
+    10 --> Length of CK
+    8E7568D5793C1EE1F5C32139AFCF9765 --> CK --> Cipher Key
+    10 --> Length of IK
+    87D83FF5AA51CACE48C21015469A6818 --> IK --> Itegrity Key
+    08 --> length of Kc
+    B4AC660C3A382B52 --> Kc --> GSM Response Parameter
 
 but if we used the same SQN and the same RAND and sent the same Authenticate Command again, the authentication would fail:
 -----------------
 Get Response: (AUTS)
 -----------------
-DC --> "Synchronisation failure" tag
-0E --> Length of AUTS
-5C11D465EEA36987F659EF33DA76 --> AUTS
+    DC --> "Synchronisation failure" tag
+    0E --> Length of AUTS
+    5C11D465EEA36987F659EF33DA76 --> AUTS
