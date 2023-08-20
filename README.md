@@ -29,9 +29,8 @@
     I: 00 C0 00 00 10 
     O: DC 0E 5C 11 D4 65 EE A3 69 87 F6 59 EF 33 DA 76 90 00 
 
------------------
 Authenticate Cmd:
------------------
+
     I: 00 88 00 81 22
 		EVEN Instruction
 	  	|     |  Command Data Length
@@ -45,9 +44,8 @@ Authenticate Cmd:
     10 --> length of AUTN
     B1BDF7AB32250101B4530E20C33FA984 --> AUTN
 
------------------
 Get Response: (RES,CK,IK,Kc)
------------------
+
     DB --> Successful 3G Authentication Tag
     08 --> Length of RES
     45FE85E4E353CC9C --> RES
@@ -59,9 +57,8 @@ Get Response: (RES,CK,IK,Kc)
     B4AC660C3A382B52 --> Kc --> GSM Response Parameter
 
 but if we used the same SQN and the same RAND and sent the same Authenticate Command again, the authentication would fail:
------------------
 Get Response: (AUTS)
------------------
+
     DC --> "Synchronisation failure" tag
     0E --> Length of AUTS
     5C11D465EEA36987F659EF33DA76 --> AUTS
