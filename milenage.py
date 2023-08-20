@@ -88,7 +88,7 @@ class Milenage:
         print('RAND : ', RAND.hex())
         print('AUTN : ', AUTN.hex())
         print('AK  : ', AK.hex())
-        print('RES : ', RES.hex())
+        print('SRES : ', RES.hex())
 
         return AUTN
         # build the Authenticate Command
